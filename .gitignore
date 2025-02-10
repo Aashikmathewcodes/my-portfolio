@@ -84,3 +84,4 @@ public/
 node_modules/.bin
 
 .next/cache
+.next
