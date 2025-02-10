@@ -1,0 +1,15 @@
+/* styles/Home.module.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: transparent; /* Remove any solid background */
+    position: relative;
+    z-index: 1; /* Ensure content sits above the background */
+  }
+  
+  .main {
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    /* Optionally add padding or border-radius as needed */
+  }
+  

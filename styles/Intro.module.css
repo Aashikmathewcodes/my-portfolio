@@ -1,0 +1,128 @@
+.introContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+  z-index: 1000;
+}
+
+.gradientBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  opacity: 0.3;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.techGrid {
+  /* Keep existing properties */
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
+}
+
+.techIcon {
+  position: absolute;
+  font-size: 3.5rem; /* Increased from 2.5rem */
+  filter: 
+    brightness(1.2) 
+    drop-shadow(0 0 8px currentColor); /* Add colored glow */
+  will-change: transform;
+  mix-blend-mode: plus-lighter; /* More vibrant blending */
+  opacity: 0.9;
+  transition: filter 0.3s ease;
+}
+
+/* Add color variation to icons */
+.techIcon:nth-child(odd) { color: hsl(180, 100%, 70%); }
+.techIcon:nth-child(even) { color: hsl(330, 100%, 70%); }
+.techIcon:nth-child(3n) { color: hsl(60, 100%, 70%); }
+.techIcon:nth-child(5n) { color: hsl(120, 100%, 70%); }
+
+
+/* Add pulse animation */
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.techIcon:hover {
+  animation: iconPulse 1.5s ease infinite;
+  filter: brightness(1.5) drop-shadow(0 0 12px currentColor);
+}
+.contentOverlay {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+.introContent {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.imageContainer {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.profilePic {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.cursor {
+  color: #23d5ab;
+  margin-left: 4px;
+}
+
+.jobContainer {
+  min-height: 60px;
+  margin-top: 1rem;
+}
+
+.jobTitle {
+  font-size: 1.5rem;
+  color: #6acaf3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
