@@ -60,10 +60,17 @@
     padding: 15px; /* Less padding in cards on mobile */
   }
   
-  .githubLink {
+  .projectLinks {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .githubLink,
+  .liveLink {
     width: 100%; /* Full width button on mobile */
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0;
   }
   
   .projectFooter {
@@ -181,6 +188,13 @@
   white-space: nowrap; /* Keep date on one line */
 }
 
+.projectLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .githubLink {
   display: flex;
   align-items: center;
@@ -197,6 +211,24 @@
 
 .githubLink:hover {
   background-color: #4a3328;
+}
+
+.liveLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #2d8659;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap; /* Keep button text on one line */
+}
+
+.liveLink:hover {
+  background-color: #236b4a;
 }
 
 /* Hover animation for the language badge */
@@ -239,7 +271,14 @@
     align-self: flex-start;
   }
   
-  .githubLink {
+  .projectLinks {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .githubLink,
+  .liveLink {
     align-self: stretch;
     justify-content: center;
   }

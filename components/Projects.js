@@ -94,6 +94,12 @@ const UpdateIcon = () => (
   </svg>
 );
 
+const ExternalLinkIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+  </svg>
+);
+
 export default function Projects() {
   const projects = [
     {
@@ -104,6 +110,55 @@ export default function Projects() {
       isPrivate: false,
       lastUpdated: 'March 16, 2025',
       link: 'https://github.com/aashikmathew/AI-Powered-Safety-Standards-Analyzer',
+    },
+    {
+      name: 'himym-maclarens-api',
+      description:
+        'A tribute API and web app to How I Met Your Mother featuring fun facts, jokes, quotes, and Barney\'s legendary pickup lines. Built with FastAPI and featuring an interactive, animated UI with glassmorphism design.',
+      language: 'Python',
+      isPrivate: false,
+      lastUpdated: 'Aug 25, 2024',
+      license: 'MIT License',
+      link: 'https://github.com/aashikmathew/himym-maclarens-api',
+      liveLink: 'https://aashikmathew.github.io/himym-maclarens-api/',
+    },
+    {
+      name: 'iot-heart-beat-monitor-dashbaord',
+      description:
+        'A FastAPI-based backend service for monitoring IoT device heartbeats and detecting anomalies. Features real-time device monitoring, anomaly detection, Prometheus metrics, Grafana integration, and a modern HTML dashboard with Docker containerization.',
+      language: 'Python',
+      isPrivate: false,
+      lastUpdated: 'Jul 1, 2024',
+      license: 'MIT License',
+      link: 'https://github.com/aashikmathew/iot-heart-beat-monitor-dashbaord',
+    },
+    {
+      name: 'astrocyte-perturbation-analysis',
+      description:
+        'Data analysis and visualization project for astrocyte perturbation studies. Includes analysis of log fold changes, calcium clusters, UMAP visualizations, and heatmaps to understand cellular responses to perturbations.',
+      language: 'Python',
+      isPrivate: false,
+      lastUpdated: 'Jul 18, 2024',
+      link: 'https://github.com/aashikmathew/astrocyte-perturbation-analysis',
+    },
+    {
+      name: 'llm-red-teaming-platform',
+      description:
+        'A comprehensive enterprise-grade red teaming system for evaluating Large Language Models (LLMs). Features 5 attack categories (Jailbreak, Bias, Hallucination, Privacy, Manipulation), support for 4 LLM providers, real-time WebSocket monitoring, automated analysis, and professional PDF report generation.',
+      language: 'Python',
+      isPrivate: false,
+      lastUpdated: 'Aug 25, 2024',
+      link: 'https://github.com/aashikmathew/llm-red-teaming-platform',
+    },
+    {
+      name: 'serverless-pipeline',
+      description:
+        'A modern, event-driven serverless architecture on Google Cloud Platform (GCP) for real-time data processing and validation. Features Cloud Run, Cloud Functions, Pub/Sub, Firestore, BigQuery, Terraform Infrastructure as Code, CI/CD pipeline, and comprehensive monitoring dashboards.',
+      language: 'Python',
+      isPrivate: false,
+      lastUpdated: 'Dec 15, 2024',
+      license: 'MIT License',
+      link: 'https://github.com/aashikmathew/serverless-pipeline',
     },
     {
       name: 'NLP_Synergy',
@@ -249,16 +304,30 @@ export default function Projects() {
                 )}
               </div>
 
-              <motion.a
-                href={project.link}
-                className={styles.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <GithubIcon /> <span>View on GitHub</span>
-              </motion.a>
+              <div className={styles.projectLinks}>
+                {project.liveLink && (
+                  <motion.a
+                    href={project.liveLink}
+                    className={styles.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <ExternalLinkIcon /> <span>View Live</span>
+                  </motion.a>
+                )}
+                <motion.a
+                  href={project.link}
+                  className={styles.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <GithubIcon /> <span>View on GitHub</span>
+                </motion.a>
+              </div>
             </div>
           </motion.div>
         ))}

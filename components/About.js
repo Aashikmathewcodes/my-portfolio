@@ -14,7 +14,7 @@ export default function About() {
         </p>
 
         <p className={styles.bio}>
-          Currently, I serve as a Graduate Research Assistant at the University of Illinois at Chicago (UIC) and a Web Developer at Creative Digital Services at UIC. I also proudly contribute as a Teaching Assistant at Cedar Grove High School in Wisconsin as part of the Microsoft TEALS Program, and as an Intel One API Ambassador. Check my Ambassdor profile{' '}
+          Currently, I serve as a Research Specialist at the University of Illinois at Chicago (UIC), College of Medicine and a Software Engineer at Creative Digital Services at UIC. I also proudly contribute as a Teaching Assistant at Cedar Grove High School in Wisconsin as part of the Microsoft TEALS Program, and as an Intel One API Ambassador. Check my Ambassdor profile{' '}
           <a 
             href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/training/academic-program/student-ambassador/all-ambassador-profiles.html?s=AtoZ" 
             target="_blank" 
